@@ -1,0 +1,19 @@
+weeks = ['周一','周二','周三','周四','周五','周六','周日']
+incomes = []
+expenses = []
+for day in weeks:
+    income = int(input('%s你的收入为：'%(day)))
+    incomes.append(income)
+
+    expense = int(input('%s你的支出为:'%(day)))
+    expenses.append(expense)
+
+    balance = income - expense
+    b = {}
+    b['%s'%(day)] = balance
+    print('%s你的结余情况为:'%(day),b)
+
+balance_all = sum(incomes)-sum(expenses)
+print('你本周的收入分别为:',incomes)
+print('你本周的支出分别为:',expenses)
+print('你本周的最终结余为:',balance_all)
